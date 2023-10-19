@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NbLayoutModule } from '@nebular/theme';
+import { NbCardModule, NbLayoutModule } from '@nebular/theme';
 
 import { HeaderRoutingModule } from './header-routing.module';
 import { HeaderComponent } from './header.component';
@@ -17,6 +17,7 @@ import { HeaderComponent } from './header.component';
     CommonModule,
     HeaderRoutingModule,
     NbLayoutModule,
+    NbCardModule,
   ],
 })
 export class HeaderModule { }

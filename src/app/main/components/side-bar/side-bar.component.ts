@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { NbMenuItem } from '@nebular/theme';
 
 @Component({
-  selector: 'app-main',
-  templateUrl: './main.component.html',
-  styleUrls: ['./main.component.scss']
+  selector: 'app-side-bar',
+  templateUrl: './side-bar.component.html',
+  styleUrls: ['./side-bar.component.scss']
 })
-export class MainComponent {
+export class SideBarComponent {
+
   items: NbMenuItem[] = [
     {
       title: 'Marca',

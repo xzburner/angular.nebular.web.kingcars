@@ -1,0 +1,17 @@
+.home {
+
+
+  &--infos {
+
+    nb-card {
+      height: 10rem;
+    }
+
+  }
+
+  &--cars {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+  }
+}
