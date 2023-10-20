@@ -1,20 +1,20 @@
 import { Injectable, Injector } from '@angular/core';
+import { Router } from '@angular/router';
 import { NbDialogService } from '@nebular/theme';
 import { OnDevComponent } from '../main/components/on-dev/on-dev.component';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class BasePageService {
 
-  private readonly dialogService: NbDialogService;
+  private readonly router: Router;
 
   constructor(injector: Injector) {
-    this.dialogService = injector.get(NbDialogService);
+    this.router = injector.get(Router);
   }
 
-  public openOnDev(): void {
-    this.dialogService.open(OnDevComponent, {
-    });
+  public openPage(page: string): void {
+    this.router.navigateByUrl(page);
   }
 }

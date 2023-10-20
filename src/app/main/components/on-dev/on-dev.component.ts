@@ -1,18 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, Injector } from '@angular/core';
 import { Router } from '@angular/router';
+import { BasePageService } from '../../../services/base-page.service';
 
 @Component({
   selector: 'app-on-dev',
   templateUrl: './on-dev.component.html',
-  styleUrls: ['./on-dev.component.scss']
+  styleUrls: ['./on-dev.component.scss'],
 })
-export class OnDevComponent {
+export class OnDevComponent extends BasePageService {
 
   constructor(
-    private router: Router,
-  ) { }
-
-  public goToHome(): void {
-    this.router.navigateByUrl('main/home');
+    private readonly injector: Injector,
+  ) {
+    super(injector);
   }
 }
