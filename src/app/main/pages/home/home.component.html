@@ -4,7 +4,7 @@
       <nb-card-body>
         <nb-form-field>
           <nb-icon nbPrefix icon="search-outline" pack="eva"></nb-icon>
-          <input type="text" nbInput fullWidth placeholder="Busca por marca, modelo ou ano...">
+          <input type="text" nbInput fullWidth placeholder="Busca por marca, modelo ou ano..." [(ngModel)]="search" (ngModelChange)="searchCar($event)">
         </nb-form-field>
         <button nbButton status="primary">Novo veículo</button>
       </nb-card-body>
@@ -12,6 +12,6 @@
   </div>
 
   <div class="home--cars">
-    <app-card-car [cars]="cars"></app-card-car>
+    <app-card-car [cars]="filteredCars"></app-card-car>
   </div>
 </div>
