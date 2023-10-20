@@ -3,6 +3,7 @@ import { cars } from '../../../fake-data/cars.data';
 import { CarModel } from '../../../models/car.model';
 import { ApiServiceService } from '../../../services/api-service.service';
 import { BasePageService } from '../../../services/base-page.service';
+import { CreateCarComponent } from '../create-car/create-car.component';
 
 @Component({
   selector: 'app-home',
@@ -28,6 +29,7 @@ export class HomeComponent extends BasePageService implements OnInit {
 
   public async getCarsData(): Promise<void> {
     try {
+      //Aqui poderia ter usado um observable, mas como não temos uma API, vamos usar um array de dados fake.
       this.cars = this.apiService.get('esta-seria-a-url-da-api');
       this.filteredCars = this.cars;
     } catch (e) {
@@ -36,7 +38,6 @@ export class HomeComponent extends BasePageService implements OnInit {
   }
 
   public async searchCar(search: any): Promise<void> {
-    console.log(search);
     if (search !== '') {
       this.filteredCars = this.cars.filter(car => car.nome_modelo.toLowerCase().includes(search.toLowerCase()) || car.brand.toLowerCase().includes(search.toLowerCase()) || car.ano.toString().toLowerCase().includes(search.toLowerCase()));
     } else {
@@ -44,4 +45,14 @@ export class HomeComponent extends BasePageService implements OnInit {
     }
   }
 
+  public async createCar(): Promise<void> {
+    const modalRef = await this.dialogService.open(CreateCarComponent);
+    modalRef.onClose.subscribe(async (carData: CarModel) => {
+      if (carData) {
+        this.cars.push(carData);
+        this.filteredCars = this.cars;
+        await this.toastrService.success('Carro cadastrado com sucesso!');
+      }
+    });
+  }
 }

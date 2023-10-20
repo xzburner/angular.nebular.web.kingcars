@@ -1,0 +1,38 @@
+.create-car {
+
+  nb-form-field {
+    margin-top: 1rem;
+  }
+
+  nb-card {
+    width: 50rem;
+    height: 40rem;
+
+    nb-card-footer {
+      display: flex;
+      justify-content: flex-end;
+
+      button {
+        margin-left: 1rem;
+      }
+    }
+  }
+
+  &--form {
+    width: 100%;
+    display: flex;
+
+    nb-form-field {
+      margin-top: 1rem;
+    }
+
+    &--left {
+      width: 45%;
+    }
+
+    &--right {
+      width: 45%;
+      margin-left: 5%;
+    }
+  }
+}

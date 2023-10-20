@@ -10,13 +10,17 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
+        button {
+          min-width: 12rem;
+        }
       }
 
       nb-form-field {
         width: 100%;
 
         input {
-          width: 90%;
+          width: 95%;
         }
 
         button {
@@ -24,11 +28,5 @@
         }
       }
     }
-
-  }
-
-  &--cars {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }

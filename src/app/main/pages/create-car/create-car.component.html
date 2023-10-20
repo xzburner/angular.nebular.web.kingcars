@@ -1,0 +1,60 @@
+<div class="create-car">
+  <nb-card>
+    <nb-card-header>
+      <span>Cadastrar novo veículo</span>
+    </nb-card-header>
+    <nb-card-body>
+      <form [formGroup]="createCarForm">
+        <div class="create-car--form">
+          <div class="create-car--form--left">
+            <nb-form-field>
+              <label for="brand">Marca:</label>
+              <input nbInput fullWidth id="brand" type="text" placeholder="Marca do veículo" formControlName="brand">
+            </nb-form-field>
+            <nb-form-field>
+              <label for="model">Modelo:</label>
+              <input nbInput fullWidth id="model" type="text" placeholder="Modelo do veículo" formControlName="nome_modelo">
+            </nb-form-field>
+            <nb-form-field>
+              <label for="year">Ano:</label>
+              <input nbInput fullWidth id="year" type="text" placeholder="Ano do veículo" formControlName="ano">
+            </nb-form-field>
+            <nb-form-field>
+              <label for="color">Cor:</label>
+              <input nbInput fullWidth id="color" type="text" placeholder="Cor do veículo" formControlName="cor">
+            </nb-form-field>
+          </div>
+
+          <div class="create-car--form--right">
+            <nb-form-field>
+              <label for="type">N Portas:</label>
+              <input nbInput fullWidth id="type" type="text" placeholder="Número de portas" formControlName="num_portas">
+            </nb-form-field>
+            <nb-form-field>
+              <label for="fuel">Combustível:</label>
+              <input nbInput fullWidth id="fuel" type="text" placeholder="Combustível do veículo" formControlName="combustivel">
+            </nb-form-field>
+            <nb-form-field>
+              <label for="km">Km:</label>
+              <input nbInput fullWidth id="km" type="text" placeholder="Km do veículo" formControlName="km">
+            </nb-form-field>
+            <nb-form-field>
+              <label for="value">Valor:</label>
+              <input nbInput fullWidth id="value" type="text" placeholder="Valor do veículo" formControlName="valor">
+            </nb-form-field>
+          </div>
+        </div>
+
+        <!--      Aqui deveria ser um serviço de upload de imagem, mas como não deu tempo de configurar um, vou deixar um campo de texto para receber um link de uma imagem já hospedada.-->
+        <nb-form-field>
+          <label for="image">Link da imagem:</label>
+          <textarea nbInput fullWidth id="image" rows="5" placeholder="Imagem do veículo" formControlName="image"></textarea>
+        </nb-form-field>
+      </form>
+    </nb-card-body>
+    <nb-card-footer>
+      <button nbButton status="danger" class="create-car--button" (click)="close()">Cancelar</button>
+      <button nbButton status="primary" class="create-car--button" (click)="createCar()">Cadastrar</button>
+    </nb-card-footer>
+  </nb-card>
+</div>
