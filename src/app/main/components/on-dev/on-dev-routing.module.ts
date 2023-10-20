@@ -5,11 +5,12 @@ import { OnDevComponent } from './on-dev.component';
 const routes: Routes = [
   {
     path: '',
-    component: OnDevComponent }
+    component: OnDevComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class OnDevRoutingModule { }
+export class OnDevRoutingModule {}

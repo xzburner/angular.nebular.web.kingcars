@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NbDialogRef, NbDialogService } from '@nebular/theme';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-on-dev',
@@ -8,11 +8,11 @@ import { NbDialogRef, NbDialogService } from '@nebular/theme';
 })
 export class OnDevComponent {
 
-    constructor(
-      protected dialogRef: NbDialogRef<OnDevComponent>,
-    ) { }
+  constructor(
+    private router: Router,
+  ) { }
 
-  public close(): void {
-    this.dialogRef.close();
+  public goToHome(): void {
+    this.router.navigateByUrl('main/home');
   }
 }

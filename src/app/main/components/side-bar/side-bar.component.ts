@@ -33,10 +33,12 @@ export class SideBarComponent extends BasePageService{
     {
       title: 'Novos',
       icon: { icon: 'checkmark-outline', pack: 'eva' },
+      link: 'on-dev',
     },
     {
       title: 'Usados',
       icon: 'unlock-outline',
+      link: 'on-dev',
     },
   ];
 }
