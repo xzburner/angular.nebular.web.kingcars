@@ -54,7 +54,7 @@
     </nb-card-body>
     <nb-card-footer>
       <button nbButton status="danger" class="create-car--button" (click)="close()">Cancelar</button>
-      <button nbButton status="primary" class="create-car--button" (click)="createCar()">Cadastrar</button>
+      <button nbButton status="primary" class="create-car--button" (click)="createCar()" [disabled]="createCarForm.invalid">Cadastrar</button>
     </nb-card-footer>
   </nb-card>
 </div>

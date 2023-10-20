@@ -1,5 +1,5 @@
 import { Component, Injector, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NbDialogRef } from '@nebular/theme';
 import { BasePageService } from '../../../services/base-page.service';
 
@@ -19,15 +19,15 @@ export class CreateCarComponent extends BasePageService implements OnInit{
     super(injector);
 
     this.createCarForm = this.fb.group({
-      brand: [''],
-      nome_modelo: [''],
-      ano: [''],
-      cor: [''],
-      num_portas: [''],
-      combustivel: [''],
-      km: [''],
-      valor: [''],
-      image: [''],
+      brand: ['', Validators.required],
+      nome_modelo: ['', Validators.required],
+      ano: ['', Validators.required],
+      cor: ['', Validators.required],
+      num_portas: ['', Validators.required],
+      combustivel: ['', Validators.required],
+      km: ['', Validators.required],
+      valor: ['', Validators.required],
+      image: ['', Validators.required],
     });
     }
 
