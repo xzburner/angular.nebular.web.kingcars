@@ -1,6 +1,6 @@
 import { Injectable, Injector } from '@angular/core';
 import { Router } from '@angular/router';
-import { NbDialogService } from '@nebular/theme';
+import { NbDialogService, NbToastrService } from '@nebular/theme';
 import { OnDevComponent } from '../main/components/on-dev/on-dev.component';
 
 @Injectable({
@@ -8,10 +8,12 @@ import { OnDevComponent } from '../main/components/on-dev/on-dev.component';
 })
 export class BasePageService {
 
-  private readonly router: Router;
+  protected readonly router: Router;
+  protected readonly toastrService: NbToastrService;
 
   constructor(injector: Injector) {
     this.router = injector.get(Router);
+    this.toastrService = injector.get(NbToastrService);
   }
 
   public openPage(page: string): void {
