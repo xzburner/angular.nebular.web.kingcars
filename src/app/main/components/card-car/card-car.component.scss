@@ -1,4 +1,9 @@
 .car {
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 1rem;
+
   nb-card {
     width: 16rem;
     height: 100%;

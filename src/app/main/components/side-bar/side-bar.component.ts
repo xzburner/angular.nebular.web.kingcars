@@ -12,7 +12,6 @@ export class SideBarComponent extends BasePageService{
   items: NbMenuItem[] = [
     {
       title: 'Marca',
-      icon: 'person-outline',
       children: [
         {
           title: 'Change Password',
@@ -27,17 +26,14 @@ export class SideBarComponent extends BasePageService{
     },
     {
       title: 'Ano / Modelo',
-      icon: 'lock-outline',
       link: 'on-dev',
     },
     {
       title: 'Novos',
-      icon: { icon: 'checkmark-outline', pack: 'eva' },
       link: 'on-dev',
     },
     {
       title: 'Usados',
-      icon: 'unlock-outline',
       link: 'on-dev',
     },
   ];

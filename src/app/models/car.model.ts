@@ -8,6 +8,7 @@ export interface CarModel {
   cor: string;
   nome_modelo: string;
   valor: number;
-  brand: number;
+  brand: string;
+  km: number;
   image: string;
 }

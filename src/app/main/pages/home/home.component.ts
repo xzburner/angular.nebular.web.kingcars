@@ -1,4 +1,4 @@
-import { Component, Injector } from '@angular/core';
+import { Component, Injector, OnInit } from '@angular/core';
 import { CarModel } from '../../../models/car.model';
 import { ApiServiceService } from '../../../services/api-service.service';
 import { BasePageService } from '../../../services/base-page.service';
@@ -8,7 +8,7 @@ import { BasePageService } from '../../../services/base-page.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent extends BasePageService {
+export class HomeComponent extends BasePageService implements OnInit{
 
   public cars: CarModel[] = [];
 
@@ -19,9 +19,13 @@ export class HomeComponent extends BasePageService {
     super(injector);
   }
 
+  public async ngOnInit(): Promise<void> {
+    await this.getCarsData();
+  }
+
   public async getCarsData(): Promise<void> {
     try {
-      this.cars = await this.apiService.get('esta-seria-a-url-da-api');
+      this.cars = this.apiService.get('esta-seria-a-url-da-api');
     }
     catch (e) {
       await this.toastrService.danger('Não foi possível carregar os dados dos carros.');

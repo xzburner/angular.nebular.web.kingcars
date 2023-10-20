@@ -1,30 +1,30 @@
 <div class="car">
-  <nb-card>
+  <nb-card *ngFor="let car of cars">
     <nb-card-header>
-      <span>Land rover Range rover sport</span>
+      <span>{{car.brand}} - {{car.nome_modelo}}</span>
     </nb-card-header>
     <nb-card-body>
-      <img src="assets/img/carro.png">
+      <img [src]="car.image">
 
       <div class="car--infos">
         <div class="car--infos--description">
-          <span>3.0 HSE 4X4 V6 24V Turbo Diesel 4P Automático</span>
+          <span>{{car.combustivel}}, {{car.num_portas}}P {{car.cor}} - {{car.ano}}</span>
         </div>
         <div class="car--infos--value">
-          <span>R$ 300.000,00</span>
+          <span>{{car.valor | currency: 'BRL'}}</span>
         </div>
 
         <div class="car--infos--parcel">
-          <span>60x R$ 5.000,00</span>
+          <span>60x {{car.valor / 60 | currency: 'BRL'}} - (aprox.)</span>
         </div>
 
         <div>
           <div class="car--infos--year">
-            <span>2018</span>
+            <span>Ano - {{car.ano}}</span>
           </div>
 
           <div class="car--infos--km">
-            <span>0 km</span>
+            <span>{{car.km}} km</span>
           </div>
         </div>
 

@@ -6,12 +6,12 @@
           <nb-icon nbPrefix icon="search-outline" pack="eva"></nb-icon>
           <input type="text" nbInput fullWidth placeholder="Busca por marca, modelo ou ano...">
         </nb-form-field>
-        <button nbButton status="primary" (click)="getCarsData()">Novo veículo</button>
+        <button nbButton status="primary">Novo veículo</button>
       </nb-card-body>
     </nb-card>
   </div>
 
   <div class="home--cars">
-    <app-card-car></app-card-car>
+    <app-card-car [cars]="cars"></app-card-car>
   </div>
 </div>

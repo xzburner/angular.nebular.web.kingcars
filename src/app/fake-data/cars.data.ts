@@ -9,9 +9,10 @@ export let cars = [
     "num_portas" : 4,
     "cor": "BRANCA",
     "nome_modelo" : "ETIOS",
-    "valor" : 36.000,
-    "brand":1,
-    "image": "https://www.toyota.com.br/wp-content/themes/toyota-portal-theme/assets/images/etios-sedan/xr-1-5-flex-16v-mecanico-4p/cores/branco-perola.png"
+    "valor" : 36000,
+    "brand": "TOYOTA",
+    "km": 100000,
+    "image": "https://s3.ecompletocarros.dev/images/lojas/150/veiculos/48827/veiculoInfoVeiculoImagesMobile/vehicle_image_1610396661_9affd81c471fdfe807f334d6d181a414.jpeg"
   },
   {
 
@@ -23,9 +24,10 @@ export let cars = [
     "num_portas" : 4,
     "cor": "PRETO",
     "nome_modelo" : "COROLLA",
-    "valor" : 120.000,
-    "brand":1,
-    "image": "https://www.toyota.com.br/wp-content/themes/toyota-portal-theme/assets/images/etios-sedan/xr-1-5-flex-16v-mecanico-4p/cores/branco-perola.png"
+    "valor" : 120000,
+    "brand": "TOYOTA",
+    "km": 100000,
+    "image": "https://photo-b2b-autoaction.storage.googleapis.com/autoaction_prod/c87cfce8-9cce-48db-cfa4-bf2475c3abf1-c57de7ff-d18c-4607-82eb-c18167fc20b9jpeg.jpg"
 
   },
   {
@@ -38,8 +40,9 @@ export let cars = [
     "num_portas" : 4,
     "cor": "AZUL",
     "nome_modelo" : "HILLUX SW4",
-    "valor" : 47.500,
-    "brand":1,
-    "image": "https://www.toyota.com.br/wp-content/themes/toyota-portal-theme/assets/images/etios-sedan/xr-1-5-flex-16v-mecanico-4p/cores/branco-perola.png"
+    "valor" : 47500,
+    "brand": "TOYOTA",
+    "km": 100000,
+    "image": "https://cdn.revendapro.com.br/vehicles/v9189101/1120c2e727da65d58f8f64f3c0908e11_thumb.jpeg"
   }
 ]
