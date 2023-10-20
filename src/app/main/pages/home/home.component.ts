@@ -1,5 +1,4 @@
 import { Component, Injector, OnInit } from '@angular/core';
-import { cars } from '../../../fake-data/cars.data';
 import { CarModel } from '../../../models/car.model';
 import { ApiServiceService } from '../../../services/api-service.service';
 import { BasePageService } from '../../../services/base-page.service';
@@ -15,6 +14,7 @@ export class HomeComponent extends BasePageService implements OnInit {
   public cars: CarModel[] = [];
   public filteredCars: CarModel[] = [];
   public search: string = '';
+  public brand: string = '';
 
   constructor(
     private readonly injector: Injector,
@@ -29,9 +29,19 @@ export class HomeComponent extends BasePageService implements OnInit {
 
   public async getCarsData(): Promise<void> {
     try {
-      //Aqui poderia ter usado um observable, mas como não temos uma API, vamos usar um array de dados fake.
-      this.cars = this.apiService.get('esta-seria-a-url-da-api');
-      this.filteredCars = this.cars;
+      this.route.queryParams.subscribe(params => {
+        this.brand = params['brand'];
+        //Aqui poderia ter usado um observable, mas como não temos uma API, vamos usar um array de dados fake.
+        this.cars = this.apiService.get('esta-seria-a-url-da-api');
+
+        if (this.brand) {
+          this.cars = this.cars.filter(car => car.brand.toUpperCase().includes(this.brand.toUpperCase()));
+        }
+
+        this.filteredCars = this.cars;
+      });
+
+
     } catch (e) {
       await this.toastrService.danger('Não foi possível carregar os dados dos carros.');
     }

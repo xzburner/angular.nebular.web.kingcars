@@ -14,13 +14,23 @@ export class SideBarComponent extends BasePageService{
       title: 'Marca',
       children: [
         {
-          title: 'Change Password',
+          title: 'Todas',
+          link: 'home',
         },
         {
-          title: 'Privacy Policy',
+          title: 'Fiat',
+          link: 'home',
+          queryParams: { brand: 'fiat' },
         },
         {
-          title: 'Logout',
+          title: 'Toyota',
+          link: 'home',
+          queryParams: { brand: 'toyota' },
+        },
+        {
+          title: 'Chevrolet',
+          link: 'home',
+          queryParams: { brand: 'chevrolet' },
         },
       ],
     },
