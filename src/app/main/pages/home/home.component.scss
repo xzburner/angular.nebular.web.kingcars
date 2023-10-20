@@ -4,7 +4,25 @@
   &--infos {
 
     nb-card {
-      height: 10rem;
+      height: 5rem;
+
+      nb-card-body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      nb-form-field {
+        width: 100%;
+
+        input {
+          width: 90%;
+        }
+
+        button {
+          width: 15rem;
+        }
+      }
     }
 
   }

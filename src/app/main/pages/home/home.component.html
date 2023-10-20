@@ -1,9 +1,13 @@
 <div class="home">
   <div class="home--infos">
     <nb-card>
-      <nb-card-header>
-        <h1>Informações</h1>
-      </nb-card-header>
+      <nb-card-body>
+        <nb-form-field>
+          <nb-icon nbPrefix icon="search-outline" pack="eva"></nb-icon>
+          <input type="text" nbInput fullWidth placeholder="Busca por marca, modelo ou ano...">
+        </nb-form-field>
+        <button nbButton status="primary" (click)="openOnDev()">Novo veículo</button>
+      </nb-card-body>
     </nb-card>
   </div>
 

@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { NbMenuItem } from '@nebular/theme';
+import { BasePageService } from '../../../services/base-page.service';
 
 @Component({
   selector: 'app-side-bar',
   templateUrl: './side-bar.component.html',
   styleUrls: ['./side-bar.component.scss']
 })
-export class SideBarComponent {
+export class SideBarComponent extends BasePageService{
 
   items: NbMenuItem[] = [
     {
@@ -27,6 +28,7 @@ export class SideBarComponent {
     {
       title: 'Ano / Modelo',
       icon: 'lock-outline',
+      link: 'on-dev',
     },
     {
       title: 'Novos',
