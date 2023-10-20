@@ -25,15 +25,15 @@ export class SideBarComponent {
       ],
     },
     {
-      title: 'Change Password',
+      title: 'Ano / Modelo',
       icon: 'lock-outline',
     },
     {
-      title: 'Privacy Policy',
+      title: 'Novos',
       icon: { icon: 'checkmark-outline', pack: 'eva' },
     },
     {
-      title: 'Logout',
+      title: 'Usados',
       icon: 'unlock-outline',
     },
   ];

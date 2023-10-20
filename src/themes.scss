@@ -2,6 +2,35 @@
 @use '@nebular/theme/styles/theming' as *;
 @use '@nebular/theme/styles/themes/default';
 
+
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 300;
+  src: url('/assets/fonts/raleway/Raleway-Light.ttf');
+}
+
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/raleway/Raleway-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/assets/fonts/raleway/Raleway-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/assets/fonts/raleway/Raleway-SemiBold.ttf');
+}
+
 $nb-themes: nb-register-theme((
 
   // add your variables here like:
@@ -16,4 +45,10 @@ $nb-themes: nb-register-theme((
   // color-primary-800: #102694,
   // color-primary-900: #091c7a,
 
+        font-family: 'Raleway',
+
 ), default, default);
+
+* {
+  font-family: 'Raleway', sans-serif !important;
+}

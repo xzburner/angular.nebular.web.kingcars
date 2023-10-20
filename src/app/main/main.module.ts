@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NbLayoutModule, NbMenuModule, NbSidebarModule } from '@nebular/theme';
+import { NbContextMenuModule, NbLayoutModule, NbMenuModule, NbSidebarModule } from '@nebular/theme';
 import { HeaderModule } from './components/header/header.module';
 import { SideBarModule } from './components/side-bar/side-bar.module';
 
@@ -20,6 +20,7 @@ import { MainComponent } from './main.component';
     NbSidebarModule.forRoot(),
     SideBarModule,
     NbMenuModule,
+    NbContextMenuModule,
   ],
 })
 export class MainModule { }

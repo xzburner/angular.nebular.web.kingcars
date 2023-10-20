@@ -1,40 +1,10 @@
-@forward '@nebular/theme/styles/theming';
-@use '@nebular/theme/styles/theming' as *;
-@use '@nebular/theme/styles/themes/default';
+nb-sidebar {
+  border-radius: 1rem;
+  margin: 2rem 0 0 5rem;
+  max-height: 33rem;
+  height: auto;
+}
 
-@include nb-install-component() {
-  .menu-sidebar ::ng-deep .scrollable {
-    padding-top: nb-theme(layout-padding-top);
-  }
-
-  .notification-sidebar ::ng-deep .scrollable {
-    padding: 0;
-  }
-
-  .expanded {
-    transition: width 250ms;
-
-    .logo {
-      margin-right: 1rem;
-      margin-left: 2rem;
-
-      img {
-        transition: ease-in-out 3s;
-        width: 8rem;
-      }
-    }
-  }
-
-  .collapsed {
-    transition: width 250ms;
-  }
-
-  .compacted {
-    transition: width 250ms;
-
-    .logo {
-      display: none;
-    }
-  }
-
+nb-layout-column {
+  margin-left: 20rem;
 }
